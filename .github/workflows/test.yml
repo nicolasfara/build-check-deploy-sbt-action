@@ -1,0 +1,99 @@
+name: CI/CD Process
+
+on:
+  push:
+    branches-ignore:
+      - 'renovate/**'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  select-tests:
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ${{ github.workflow }}-select-tests-${{ github.event.number || github.ref }}
+      cancel-in-progress: true
+    outputs:
+      tests: ${{ steps.trick.outputs.tests }}
+    steps:
+      - name: Trick Renovate
+        id: trick
+        shell: bash
+        run: |
+          USES=$(cat <<TRICK_RENOVATE
+          - uses: nicolasfara/Template-for-Scala-Multiplatform-Projects@3bad011b4d648d02f5f5813636e43c2009443e4a
+          TRICK_RENOVATE
+          )
+          export USES="$USES"
+          ruby -e 'puts "tests=#{ENV["USES"].lines.map { |line| /^-\s+uses:\s+([^\s]+\/[^\s]+)@(.*)\s*$/.match(line) }.map { |match| [match[1], match[2]] }}"' >> $GITHUB_OUTPUT
+  test:
+    needs:
+      - select-tests
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ windows-2022, macos-14, ubuntu-22.04 ]
+        test: ${{ fromJson(needs.select-tests.outputs.tests) }}
+    runs-on: ${{ matrix.os }}
+    concurrency:
+      group: ${{ github.workflow }}-test-${{ matrix.os }}-${{ matrix.test[0] }}-${{ matrix.test[1] }}-${{ github.event.number || github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+        with:
+          path: 'action'
+      - name: Checkout test repo
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          repository: ${{ matrix.test[0] }}
+          path: 'target'
+          ref: ${{ matrix.test[1] }}
+      - uses: ./action
+        with:
+          build-command: sbt tasks
+          check-command: |
+            for x in 1 2 3; do
+              echo $x
+            done
+          working-directory: target
+          should-run-codecov: false
+          clean-command: sbt clean
+      - uses: ./action
+        with:
+          working-directory: target
+          should-run-codecov: false
+  release:
+    if: github.event_name == 'push'
+    needs:
+      - test
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
+      - name: Install Node
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version-file: package.json
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm install
+          npx semantic-release
+  success:
+    runs-on: ubuntu-22.04
+    needs:
+      - select-tests
+      - test
+      - release
+    if: >-
+      always() && (
+        contains(join(needs.*.result, ','), 'failure')
+        || !contains(join(needs.*.result, ','), 'cancelled')
+      )
+    steps:
+      - name: Verify that there were no failures
+        run: ${{ !contains(join(needs.*.result, ','), 'failure') }}
