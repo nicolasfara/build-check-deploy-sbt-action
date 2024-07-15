@@ -1,0 +1,11 @@
+{
+    "name": "build-check-deploy-sbt-action",
+    "description": "A composite action taking care of running a complete CI pipeline on a SBT project",
+    "author": "Nicolas Farabegoli (https://nicolasfarabegoli.it)",
+    "devDependencies": {
+      "semantic-release-preconfigured-conventional-commits": "1.1.91"
+    },
+    "engines": {
+      "node": "20.15"
+    }
+  }
