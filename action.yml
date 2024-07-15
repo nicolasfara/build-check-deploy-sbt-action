@@ -1,0 +1,189 @@
+name: Build and delivery a SBT project
+description: Build and delivery a SBT project
+branding:
+  icon: 'box'  
+  color: 'green'
+  
+inputs:
+  pre-build-command:
+    description: 'A command to be executed before the build phase (but after configuring the JVM)'
+    default: 'true'
+    required: false
+  build-command:
+    description: 'The command executed in the build phase'
+    default: 'sbt +package'
+    required: false
+  check-command:
+    description: 'The command executed in the check phase'
+    default: 'sbt +test'
+    required: false
+  clean-command:
+    description: 'The command executed in the final clean phase'
+    default: 'true'
+    required: false
+  retries-on-failure:
+    description: 'How many times every command should be retried before giving up'
+    default: '2'
+    required: false
+  wait-between-retries:
+    description: 'How many seconds to wait after a step failure before attempting a new run'
+    default: '5'
+    required: false
+  codecov-directory:
+    description: 'The location where CodeCov searches for coverage information'
+    default: build
+    required: false
+  codecov-token:
+    description: 'The codecov token for this repository'
+    default: ""
+    required: false
+  deploy-command:
+    description: 'The condition triggering a deploy run'
+    default: "sbt ci-release"
+    required: false
+  java-distribution:
+    description: 'The Java distrbutor to use'
+    default: "temurin"
+    required: false
+  java-version:
+    description: 'The Java version to use'
+    default: "17"
+    required: false
+  should-run-codecov:
+    description: 'True if the action should send coverage results to codecov.io'
+    default: true
+    required: false
+  should-deploy:
+    description: 'True if the deploy operation should be executed'
+    default: false
+    required: false
+  maven-central-username:
+    description: 'Username for Maven Central that will be exposed in the deployment step as the environment variables MAVEN_CENTRAL_PASSWORD'
+    required: false
+  working-directory:
+    description: 'Location where the repository should will be cloned'
+    default: '.'
+    required: false
+  github-token:
+    description: 'The GitHub token, it will be exposed in the deployment step as the environment variable GITHUB_TOKEN'
+    required: false
+  maven-central-password:
+    description: 'Password for OSSRH / Maven Central, it will be exposed in the deployment step as the environment variables MAVEN_CENTRAL_PASSWORD'
+    required: false
+  maven-central-repo:
+    description: 'URL for OSSRH / Maven Central Repository, it will be exposed in the deployment step as the environment variables MAVEN_CENTRAL_REPO'
+    required: false
+    default: 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
+  signing-key:
+    description: 'ASCII-armored base64 signing key, it will be exposed in the deployment step as the environment variable'
+    required: false
+  signing-password:
+    description: 'Password for the signing key, it will be exposed in the deployment step as the environment variables SIGNING_PASSWORD'
+    required: false
+
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Java
+      uses: actions/setup-java@v4.2.1
+      with:
+        distribution: ${{ inputs.java-distribution }}
+        java-version: ${{ inputs.java-version }}
+        # Apache Maven Configuration
+        server-id: ossrh
+        server-username: MAVEN_CENTRAL_USERNAME
+        server-password: MAVEN_CENTRAL_PASSWORD
+        gpg-private-key: ${{ inputs.signing-key }}
+        gpg-passphrase: SIGNING_PASSWORD
+    - name: Cache SBT packages
+      uses: actions/cache@v4.0.2
+      with:
+        path: |
+          ~/.ivy2/cache
+          ~/.sbt
+          ~/.coursier/cache
+        key: ${{ runner.os }}-sbt-${{ hashFiles('**/build.sbt') }}
+        restore-keys: |
+          ${{ runner.os }}-sbt-
+    - name: Compute the heredoc id
+      id: hd-id
+      shell: bash
+      run: echo heredoc=${{ github.sha }} >> $GITHUB_OUTPUT
+    - name: Pre-build
+      working-directory: ${{ inputs.working-directory }}
+      shell: bash
+      run: |
+        echo "::group::Pre-Build"
+        for attempt in $(seq 1 "${{ inputs.retries-on-failure }}"); do
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
+          {
+            ${{ inputs.pre-build-command }}
+          } && break || sleep "${{ inputs.wait-between-retries }}"
+          if [ "$attempt" = "${{ inputs.retries-on-failure }}" ]; then false; fi
+        done
+        echo "::endgroup::"
+    - name: Build
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        echo "::group::Build"
+        COMMAND='${{ inputs.build-command }}'
+        for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
+          {
+            ${{ inputs.build-command }}
+          } && break || sleep "${{ inputs.wait-between-retries }}"
+          if [ "$attempt" = "${{ inputs.retries-on-failure}}" ]; then false; fi
+        done
+        echo "::endgroup::"
+    - name: Check
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        echo "::group::Check"
+        for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
+          {
+            ${{ inputs.check-command }}
+          } && break || sleep "${{ inputs.wait-between-retries }}"
+          if [ "$attempt" = "${{ inputs.retries-on-failure}}" ]; then false; fi
+        done
+        echo "::endgroup::"
+    - name: Check codecov token
+      shell: bash
+      if: inputs.should-run-codecov == 'true' && inputs.codecov-token == ''
+      run: echo '::error title=Codecov enabled but no Codecov token provided::Please set the `codecov-token` input with the appropriate Codecov token'
+    - name: CodeCov
+      if: inputs.should-run-codecov == 'true'
+      uses: codecov/codecov-action@v4.5.0
+      with:
+        directory: ${{ inputs.codecov-directory }}
+        token: ${{ inputs.codecov-token }}
+    - name: Deploy
+      if: inputs.should-deploy == 'true'
+      working-directory: ${{ inputs.working-directory }}
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+        SONATYPE_PASSWORD: ${{ inputs.maven-central-password }}
+        SONATYPE_USERNAME: ${{ inputs.maven-central-username }}
+        PGP_PASSPHRASE: ${{ inputs.signing-password }}
+        PGP_SECRET: ${{ inputs.signing-key }}
+      run: |
+        echo "::group::Deploy"
+        for attempt in $(seq 1 "${{ inputs.retries-on-failure}}"); do
+          echo "Attempt $attempt/${{ inputs.retries-on-failure }}"
+          {
+            ${{ inputs.deploy-command }}
+          } && break || sleep "${{ inputs.wait-between-retries }}"
+          if [ "$attempt" = "${{ inputs.retries-on-failure}}" ]; then false; fi
+        done
+        echo "::endgroup::"
+    - name: Cleanup
+      working-directory: ${{ inputs.working-directory }}
+      shell: bash
+      run: |
+        echo "::group::Cleanup"
+        ${{ inputs.clean-command }}
+        echo "::endgroup::"
