@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: |
           USES=$(cat <<TRICK_RENOVATE
-          - uses: nicolasfara/Template-for-Scala-Multiplatform-Projects@3bad011b4d648d02f5f5813636e43c2009443e4a
+          - uses: nicolasfara/Template-for-Scala-Multiplatform-Projects@master
           TRICK_RENOVATE
           )
           export USES="$USES"
