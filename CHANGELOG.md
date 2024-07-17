@@ -1,3 +1,13 @@
+## [1.0.1](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.0...1.0.1) (2024-07-17)
+
+### Dependency updates
+
+* **deps:** add renovate.json ([fb4c17d](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/fb4c17d941f32e08818d09f7415ee22164c8afac))
+
+### Bug Fixes
+
+* remove gpg from setup-java ([e93e780](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/e93e780d29a0cdeccb3ac4aa53ceb23cca0ad26f))
+
 ## 1.0.0 (2024-07-17)
 
 ### Features
