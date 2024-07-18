@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.1...1.0.2) (2024-07-18)
+
+### Bug Fixes
+
+* do not default to task not default available in sbt ([f369047](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/f369047d77d72470329f3cf3f4ff11595d95ff68))
+
 ## [1.0.1](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.0...1.0.1) (2024-07-17)
 
 ### Dependency updates
