@@ -39,7 +39,7 @@ inputs:
     required: false
   deploy-command:
     description: 'The condition triggering a deploy run'
-    default: "sbt ci-release"
+    default: "true"
     required: false
   java-distribution:
     description: 'The Java distrbutor to use'
