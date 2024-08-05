@@ -1,3 +1,13 @@
+## [1.0.3](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.2...1.0.3) (2024-08-05)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v4.2.2 ([fb2bba8](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/fb2bba8e3e04b93ae38f40224e99e4ef446e013c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.92 ([d88d9cc](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/d88d9cc8e58c1f89df470a8efa93971f895c6cbf))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.93 ([57b2325](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/57b23258d9eaeffc6921c87b4e5f746ca12a0173))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.95 ([a46d9ba](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/a46d9ba71626838afd9321bc87dd6782faefec0f))
+* **deps:** update node.js to 20.16 ([8f029a1](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/8f029a13cb8e02f4008785a035e70a3450eda104))
+
 ## [1.0.2](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.1...1.0.2) (2024-07-18)
 
 ### Bug Fixes
