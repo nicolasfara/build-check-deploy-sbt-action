@@ -1,3 +1,17 @@
+## [1.0.4](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.3...1.0.4) (2024-09-09)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v4.3.0 ([3d06ff5](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/3d06ff5843bad8cbf4adbf4d33b3e934a88ae5e1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.100 ([c6c4ba4](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/c6c4ba4c93c39e905598d028a43dda5a66da7497))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.101 ([b9ab0c9](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/b9ab0c9e5f8418bda99c40ee7f0bb97b70ff8191))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.102 ([e8d8d5b](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/e8d8d5be761a89d01412420c0254d27ad4155885))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.104 ([c58ca52](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/c58ca529d284861babff38d7c29ec0aa0f6c6ba5))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.96 ([d15cf06](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/d15cf065e3fa0268585401e7a219de51b76b4163))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.97 ([202d839](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/202d8394ca6d074c3e18cc19b1b47d5302cb8b58))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.99 ([e62eaf6](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/e62eaf6ad63c12cf2b6fba9fda8566324edcafd2))
+* **deps:** update node.js to 20.17 ([9b8183c](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/9b8183cd2530fdac2e8562d0383e83a4bd89ab36))
+
 ## [1.0.3](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.2...1.0.3) (2024-08-05)
 
 ### Dependency updates
