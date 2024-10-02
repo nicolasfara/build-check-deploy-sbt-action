@@ -1,3 +1,17 @@
+## [1.0.6](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.5...1.0.6) (2024-10-02)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v4.6.0 ([6d93577](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/6d935777d9d618cf18c6ffe77b932c6b0a617fbc))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.108 ([db237d5](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/db237d59992067b460c9ed6ac71a89edb97ae501))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.109 ([24bc3c3](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/24bc3c372ec5a5e7b58722ab03354692cddf0095))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.110 ([96caf60](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/96caf60b1166a1c66671371b1236a134729d7a33))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.2.0 ([c084cce](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/c084cced0eb580b1eee3fae918f9bfd9512a9b4f))
+* **deps:** update dependency ubuntu to v24 ([448449a](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/448449af93f69872e7e1146f2e1a2c25f13bf07f))
+
 ## [1.0.5](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.4...1.0.5) (2024-09-24)
 
 ### Dependency updates
