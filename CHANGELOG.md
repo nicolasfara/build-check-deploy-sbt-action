@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.6...1.0.7) (2024-10-05)
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v4.1.0 ([63a5559](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/63a5559c7f62d01495fa185292bcb874dcfdc1a6))
+* **deps:** update node.js to 20.18 ([8869a33](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/8869a33c99d3788fe2cfa7fb18344fbc64adffb5))
+
 ## [1.0.6](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.5...1.0.6) (2024-10-02)
 
 ### Dependency updates
