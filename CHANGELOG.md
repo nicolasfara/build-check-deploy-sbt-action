@@ -1,3 +1,9 @@
+## [1.0.10](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.9...1.0.10) (2024-10-17)
+
+### Dependency updates
+
+* **core-deps:** update sbt/setup-sbt action to v1.1.1 ([9b0f066](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/9b0f06664bf7c4f18e94294d4aa759dfb738054d))
+
 ## [1.0.9](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.8...1.0.9) (2024-10-11)
 
 ### Dependency updates
