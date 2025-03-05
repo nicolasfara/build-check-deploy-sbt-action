@@ -1,3 +1,44 @@
+## [1.0.14](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.13...1.0.14) (2025-03-05)
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v4.2.0 ([4620698](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/4620698f1cd7056f5e4eac8dd35640d43857d770))
+* **core-deps:** update actions/cache action to v4.2.1 ([adc812b](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/adc812b7431d990952409298a9cd1469522ce1f8))
+* **core-deps:** update actions/cache action to v4.2.2 ([7ffd230](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/7ffd230d5562b0bec014dc8af5a4b199791acd53))
+* **core-deps:** update actions/setup-java action to v4.6.0 ([7270668](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/72706688a4010fdf66c0664ea473fa63ddf10627))
+* **core-deps:** update actions/setup-java action to v4.7.0 ([d5a6be1](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/d5a6be1fca089aa93c742e45c3b9717b6a5156ba))
+* **core-deps:** update codecov/codecov-action action to v5 ([08a33c1](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/08a33c119fa21dc2b72a565294522c833bcd5f70))
+* **core-deps:** update codecov/codecov-action action to v5.0.2 ([8bba32e](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/8bba32e8bda2f0843b0669a9d5e215d9113b9b9d))
+* **core-deps:** update codecov/codecov-action action to v5.0.3 ([0bbd946](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/0bbd946152452849cf302122273a826e0e1f5dcc))
+* **core-deps:** update codecov/codecov-action action to v5.0.6 ([8c99625](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/8c9962507302bfa888ad4e91b2682c094715cbd9))
+* **core-deps:** update codecov/codecov-action action to v5.0.7 ([b12bd16](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/b12bd168041fdeb867cb41a626d4f0e3ed93001e))
+* **core-deps:** update codecov/codecov-action action to v5.1.0 ([ea89987](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/ea8998769e3679ad2499ddc883f731dad97f193e))
+* **core-deps:** update codecov/codecov-action action to v5.1.1 ([6f6e196](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/6f6e196231e88596482d5597e28b85898ecdce5f))
+* **core-deps:** update codecov/codecov-action action to v5.1.2 ([10c7239](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/10c7239af0fd4e3bf6da7da368d8d84a491163a4))
+* **core-deps:** update codecov/codecov-action action to v5.3.1 ([332bab1](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/332bab121b251d6d831c80ce434bbcbe63008070))
+* **core-deps:** update codecov/codecov-action action to v5.4.0 ([295ea5e](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/295ea5e86580465bd940a2ecc06c66797ad88eed))
+* **core-deps:** update sbt/setup-sbt action to v1.1.3 ([08f5efb](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/08f5efbcbd57745da35e91937a445099122fedeb))
+* **core-deps:** update sbt/setup-sbt action to v1.1.4 ([cdbd017](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/cdbd0175e6a2fe496ae8dd8044f8ae8afe22fb73))
+* **core-deps:** update sbt/setup-sbt action to v1.1.5 ([66cb100](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/66cb100583bff39ff9717e80e208eb7ba4a689aa))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.112 ([3bae204](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/3bae204af80f19a087e58c1b3724168c10b2ac4c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.113 ([d420dae](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/d420daecc1286e5780133d39363575763762ac39))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.114 ([6f7ded5](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/6f7ded50683645427f9275b6acbe287ece252159))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.115 ([410baba](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/410baba0192eac94942d4bc221a03e0b8e84c394))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.116 ([74131a1](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/74131a1336acb8b4212b9d56f3d1acb41ebaa1a8))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.125 ([be10257](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/be10257ac389aae8a9c66c4a0ff91f6084da7d75))
+* **deps:** update node.js to 22.12 ([46187d3](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/46187d3443ec7af03aedbab25c5c8cfd6c45dfe6))
+* **deps:** update node.js to 22.14 ([bb6803e](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/bb6803e7961fc6365a73e101950ed07bf44177d4))
+* **deps:** update node.js to v22 ([f8308ea](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/f8308ea2b002a4c6221d0f39ebd4160c9b52334a))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.1.0 ([9e1544c](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/9e1544c4cda5ececea37fac1408c90df5c638cf0))
+* **deps:** update actions/setup-node action to v4.2.0 ([e011262](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/e0112625425849461dd46b191b14683745a5300d))
+
+### General maintenance
+
+* use with instead assert ([7bba79a](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/7bba79a11c353fc24117e80432a5e2d87a93b287))
+
 ## [1.0.13](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.12...1.0.13) (2024-10-24)
 
 ### Dependency updates
