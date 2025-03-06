@@ -13,7 +13,6 @@ This GitHub Action automates the process of building, checking, and deploying Sc
 To use this action, add the following to your workflow configuration file:
 
 ```yaml
-```yaml
 name: Example Workflow
 
 on: [push]
