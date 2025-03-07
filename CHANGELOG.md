@@ -1,3 +1,14 @@
+## [1.0.15](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.14...1.0.15) (2025-03-07)
+
+### Dependency updates
+
+* **core-deps:** update sbt/setup-sbt action to v1.1.6 ([a7329eb](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/a7329ebafadf95f84afb26106c0bf231233dbdd3))
+
+### General maintenance
+
+* **readme:** provide a minimal documentation ([c691dc9](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/c691dc97e8ba6595c2ee0849249104fb2daf9164))
+* **readme:** typo ([fe759d5](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/fe759d588e9ea950124c266503d1619924be8ea5))
+
 ## [1.0.14](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.13...1.0.14) (2025-03-05)
 
 ### Dependency updates
