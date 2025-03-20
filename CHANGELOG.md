@@ -1,3 +1,9 @@
+## [1.0.17](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.16...1.0.17) (2025-03-20)
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v4.2.3 ([5a3381f](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/5a3381f9f03e95b741265add0f1e936e08ecb276))
+
 ## [1.0.16](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.15...1.0.16) (2025-03-18)
 
 ### Dependency updates
