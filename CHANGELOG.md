@@ -1,3 +1,9 @@
+## [1.0.18](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.17...1.0.18) (2025-04-09)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v4.7.1 ([5324935](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/53249354907c87085a4072a98eb2a474c97d5c5a))
+
 ## [1.0.17](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.16...1.0.17) (2025-03-20)
 
 ### Dependency updates
