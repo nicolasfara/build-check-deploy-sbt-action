@@ -1,3 +1,14 @@
+## [1.0.19](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.18...1.0.19) (2025-04-15)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v5.4.1 ([bd6f038](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/bd6f0382747c03938cd1480d179c58716f1fd392))
+* **core-deps:** update codecov/codecov-action action to v5.4.2 ([00b58d6](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/00b58d6da3386decb5c7be5da23f89aaac1fe8cc))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.4.0 ([bb80891](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/bb8089160f88eb411de81cd7486525ac034bd34f))
+
 ## [1.0.18](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.17...1.0.18) (2025-04-09)
 
 ### Dependency updates
