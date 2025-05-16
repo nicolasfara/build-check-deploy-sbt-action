@@ -1,3 +1,13 @@
+## [1.0.20](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.19...1.0.20) (2025-05-16)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v5.4.3 ([8b7f20d](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/8b7f20dd56dbb907c429cd84cfd77917dcdfb9a5))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.126 ([59e3eea](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/59e3eea7528932359ef4975cea8b754184637d6d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.127 ([8807121](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/8807121abe319bf06c0ddcbaf04e1ebdfac61c56))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.128 ([6628deb](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/6628debca79bd5cfb3fcd7d082a3fae35cdcc3b7))
+* **deps:** update node.js to 22.15 ([295412a](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/295412aa223c179bd6428c01d72975ddd0a56297))
+
 ## [1.0.19](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.18...1.0.19) (2025-04-15)
 
 ### Dependency updates
