@@ -97,7 +97,7 @@ runs:
         # gpg-private-key: ${{ inputs.signing-key }}
         # gpg-passphrase: SIGNING_PASSWORD
     - name: Install SBT toolchain
-      uses: sbt/setup-sbt@v1.1.9
+      uses: sbt/setup-sbt@v1.1.11
     - name: Cache SBT packages
       uses: actions/cache@v4.2.3
       with:
