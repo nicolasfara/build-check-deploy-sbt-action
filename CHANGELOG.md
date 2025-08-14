@@ -1,3 +1,13 @@
+## [1.0.25](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.24...1.0.25) (2025-08-14)
+
+### Dependency updates
+
+* **core-deps:** update sbt/setup-sbt action to v1.1.12 ([0e6a008](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/0e6a008cf9db9a3997c5db072c82ad467160daa6))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v5 ([0d0f124](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/0d0f124dbb3810e5a2f21e413cbb398257d572b3))
+
 ## [1.0.24](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.23...1.0.24) (2025-08-08)
 
 ### Dependency updates
