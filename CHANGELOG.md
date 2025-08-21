@@ -1,3 +1,10 @@
+## [1.0.26](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.25...1.0.26) (2025-08-21)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v5.5.0 ([7005ba5](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/7005ba56e790a0cdfc2a00b6da15aef3eac924b4))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.140 ([ff2ce99](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/ff2ce9915d50869a7882037978c86c4c0c55a364))
+
 ## [1.0.25](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.24...1.0.25) (2025-08-14)
 
 ### Dependency updates
