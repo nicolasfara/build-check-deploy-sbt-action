@@ -1,3 +1,10 @@
+## [1.0.28](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.27...1.0.28) (2025-09-06)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v5.5.1 ([3d05407](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/3d0540733f7c34529a45de2c83139213956c3722))
+* **deps:** update node.js to 22.19 ([06a7b12](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/06a7b12d6fe2cac423e8a17430c2ddf4912fbc1f))
+
 ## [1.0.27](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.26...1.0.27) (2025-08-22)
 
 ### Dependency updates
