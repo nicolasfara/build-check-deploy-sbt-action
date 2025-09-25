@@ -1,3 +1,14 @@
+## [1.0.30](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.29...1.0.30) (2025-09-25)
+
+### Dependency updates
+
+* **core-deps:** update actions/cache action to v4.3.0 ([e90cd6a](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/e90cd6ab754d81c3f3a5498bc1a37eb7ab7fca84))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.142 ([3eecb9c](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/3eecb9c683c5b62900d6a0802ad0616a88c1a4d3))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.143 ([179d31b](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/179d31b64ca9348f7d19235f3455fc009f6f22ab))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.144 ([20436f0](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/20436f0640946149a034f5b8420726cfb95dea14))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.145 ([d0f1309](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/d0f1309f8c778866ad73f2d9f96a5600be673cf7))
+* **deps:** update node.js to 22.20 ([58ad703](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/58ad70341c2163ed1c82057d70589b39547fc34f))
+
 ## [1.0.29](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.28...1.0.29) (2025-09-08)
 
 ### Dependency updates
