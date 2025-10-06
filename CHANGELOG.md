@@ -1,3 +1,11 @@
+## [1.0.31](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.30...1.0.31) (2025-10-06)
+
+### Dependency updates
+
+* **core-deps:** update sbt/setup-sbt action to v1.1.14 ([b9a5d2a](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/b9a5d2a1abe9b210f58e55e2f4fc367b1bb4474b))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.146 ([7ee7306](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/7ee73068d20581273ac13915e1173bad65b0465f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.147 ([198949d](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/198949d76ddccf792a2e5f9d0795748b61bc4d31))
+
 ## [1.0.30](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.29...1.0.30) (2025-09-25)
 
 ### Dependency updates
