@@ -1,3 +1,14 @@
+## [1.0.33](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.32...1.0.33) (2025-12-05)
+
+### Dependency updates
+
+* **core-deps:** update actions/setup-java action to v5.1.0 ([ccdba15](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/ccdba1508be7c57c16d22978474b21406c6369ff))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v6.0.1 ([3625e96](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/3625e965b80b1c4dcb2c720470027161bdba74c9))
+* **deps:** update actions/setup-node action to v6.1.0 ([4b187c8](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/4b187c82cb6d0cdf65656f00bd726e20fada930d))
+
 ## [1.0.32](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.31...1.0.32) (2025-11-24)
 
 ### Dependency updates
