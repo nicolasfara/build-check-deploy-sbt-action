@@ -1,3 +1,9 @@
+## [1.0.34](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.33...1.0.34) (2025-12-10)
+
+### Dependency updates
+
+* **core-deps:** update codecov/codecov-action action to v5.5.2 ([3e5cc88](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/3e5cc88d31ef8c71ffa18e9ab15c7ee5d6fa9852))
+
 ## [1.0.33](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.32...1.0.33) (2025-12-05)
 
 ### Dependency updates
