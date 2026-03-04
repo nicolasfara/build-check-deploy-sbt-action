@@ -1,3 +1,14 @@
+## [1.0.44](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.43...1.0.44) (2026-03-04)
+
+### Dependency updates
+
+* **core-deps:** update sbt/setup-sbt action to v1.1.19 ([53bd9da](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/53bd9da90f2d33af8bd200964d1cba3e8500a26d))
+* **deps:** update node.js to 24.14 ([8c5052d](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/8c5052d7775aa10cc22b6674016ae1638bd0e9d0))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6.3.0 ([40cabcc](https://github.com/nicolasfara/build-check-deploy-sbt-action/commit/40cabcc946174faf41c051cb85acb0d33495113a))
+
 ## [1.0.43](https://github.com/nicolasfara/build-check-deploy-sbt-action/compare/1.0.42...1.0.43) (2026-02-24)
 
 ### Dependency updates
